@@ -1,0 +1,11 @@
+.firstStyle {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
+
+.secondStyle {
+  background-color: gray;
+  color: black;
+  font-weight: normal;
+}

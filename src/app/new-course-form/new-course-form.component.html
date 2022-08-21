@@ -1,0 +1,13 @@
+<form [formGroup]="form" class="mt-3">
+   <input type="text" formControlName="name" class="form-control" (keyup.enter)="addTopic(topic)" #topic>
+   <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+      <div *ngIf="name.errors.required"> input could not be empty.</div>
+   </div>
+   <ul class="list-group">
+     <li
+        *ngFor="let topic of topics.controls"
+         class="list-group-item" [textContent]="topic.value"
+         (click)="onRemoveTopic(topic)">
+     </li>
+   </ul>
+</form>

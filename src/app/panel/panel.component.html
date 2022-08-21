@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card mt-2">
+    <div class="card-heading" *ngIf="isActive; else noCourse">
+      <ng-content select=".heading"></ng-content>
+    </div>
+    <ng-template #noCourse class="card-body">
+      <ng-content select=".body"></ng-content>
+    </ng-template>
+  </div>
+</div>
+<div [hidden]="!isActive">
+  <h1>List of panel</h1>
+</div>
+
+
+

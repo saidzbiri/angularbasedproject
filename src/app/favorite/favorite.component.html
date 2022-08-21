@@ -1,0 +1,20 @@
+<div class="container">
+  <span>
+    <i *ngFor="let etat of starArray; index as i" [ngClass]="{
+         'bi bi-star-fill': etat,
+         'bi bi-star': !etat
+       }"
+       (click)="onClick(i)">
+    </i>
+  </span>
+</div>
+
+<button [ngClass]="{
+   firstStyle: isSelected,
+   secondStyle: !isSelected
+}"
+(click)="onAdd()"
+>
+  Save
+</button>
+
